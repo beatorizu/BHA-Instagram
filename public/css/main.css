@@ -37,7 +37,7 @@ hr {
 	width: 7rem;
 }
 
-.stories {
+.stories, .posts {
 	padding: 0.375rem 16rem;
 }
 
@@ -59,9 +59,33 @@ hr {
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
-.stories__userphoto {
+.stories__userphoto, .post__userphoto {
 	border-radius: 100%;
 	height: 3.125rem;
 	width: 3.125rem;
 	border: 3px solid transparent;
+}
+
+.post {
+	border: 2px solid #e2e2e2;
+	border-radius: 2px;
+}
+
+.post__header {
+	display: flex;
+	align-items: center;
+}
+
+.post__userphoto {
+	height: 2rem;
+	width: 2rem;
+}
+
+.post__footer {
+	background: #f2f2f2;
+}
+
+.post__username {
+	font-weight: bolder;
+	margin-right: auto;
 }
