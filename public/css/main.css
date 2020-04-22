@@ -69,6 +69,7 @@ hr {
 .post {
 	border: 2px solid #e2e2e2;
 	border-radius: 2px;
+	margin-bottom: 1.25rem;
 }
 
 .post__header {
@@ -79,6 +80,18 @@ hr {
 .post__userphoto {
 	height: 2rem;
 	width: 2rem;
+}
+
+.post__photo {
+	width: 100%;
+}
+
+.post__menu {
+	display: flex;
+}
+
+.post__save {
+	margin-left: auto;
 }
 
 .post__footer {
