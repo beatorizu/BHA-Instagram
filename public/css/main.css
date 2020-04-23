@@ -93,6 +93,10 @@ hr {
 	padding: 9px 10px 8px;
 }
 
+.post__like--liked {
+	color: #ed4956;
+}
+
 .post__comment {
 	padding-left: 15px;
 }
