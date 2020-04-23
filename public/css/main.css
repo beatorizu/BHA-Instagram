@@ -104,9 +104,15 @@ hr {
 .post__footer {
 	background: #f2f2f2;
 	padding: 5px;
+	display: flex;
+	align-items: center;
 }
 
 .post__username {
 	font-weight: bolder;
-	margin-right: auto;
+	margin: 0.25rem;
+}
+
+.post__header--options {
+	margin-left: auto;
 }
