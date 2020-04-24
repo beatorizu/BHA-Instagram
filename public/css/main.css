@@ -33,17 +33,14 @@ body {
 	background: #fafafa;
 }
 
-hr {
-        height: 2px;
-        border-width: 0;
-        color: #e2e2e2;
-		background-color: #e2e2e2;
-		margin: 0;
-}
-
 .header {
 	display: flex;
 	align-items: center;
+	background: #ffffff;
+	position: sticky;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 0 #e2e2e2;
 }
 
 .header__item:last-child {
