@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
+i:active {
+    transform: translateX(1px);
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
 	.header, .stories, .posts {
