@@ -21,7 +21,7 @@ const Routes = () => (
     </Route>
 
     <Route path="/newuser">
-
+      <NewUserRoute />
     </Route>
   </Switch>
 );
