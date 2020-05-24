@@ -8,8 +8,16 @@ import './Topbar.scss';
 
 const Topbar = () => (
   <header className="topbar">
-    <LogoSvg className="topbar__logo" />
     <div className="container">
+      <LogoSvg className="topbar__logo" />
+      <div className="topbar__group">
+        <button className="topbar__icon">
+          <i className="fas fa-users"></i>
+        </button>
+        <button className="topbar__icon">
+          <i className="fas fa-user-plus"></i>
+        </button>
+      </div>
     </div>
   </header>
 );
