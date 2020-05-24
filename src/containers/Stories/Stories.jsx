@@ -8,7 +8,7 @@ const Stories = ({ stories, getUserHandler }) => {
   const showStory = false;
   return (
     <React.Fragment>
-      <section className="stories">
+      <section className="stories" data-testid="stories">
         <div className="container">
         </div>
       </section>
