@@ -9,13 +9,19 @@ import './Topbar.scss';
 const Topbar = () => (
   <header className="topbar">
     <div className="container">
-      <LogoSvg className="topbar__logo" />
+      <Link to="/">
+        <LogoSvg className="topbar__logo" />
+      </Link>
       <div className="topbar__group">
         <button className="topbar__icon">
-          <i className="fas fa-users"></i>
+          <Link to="/users">
+            <i className="fas fa-users"></i>
+          </Link>
         </button>
         <button className="topbar__icon">
-          <i className="fas fa-user-plus"></i>
+          <Link to="/newuser">
+            <i className="fas fa-user-plus"></i>
+          </Link>
         </button>
       </div>
     </div>
