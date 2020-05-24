@@ -8,6 +8,7 @@ import './Topbar.scss';
 
 const Topbar = () => (
   <header className="topbar">
+    <LogoSvg className="topbar__logo" />
     <div className="container">
     </div>
   </header>

@@ -8,8 +8,7 @@ import Routes from '../../routes';
 import './App.scss';
 
 const App = () => (
-  <div>
-  </div>
+  <Topbar />
 );
 
 export default App;
