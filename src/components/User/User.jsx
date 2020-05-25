@@ -8,6 +8,12 @@ const User = ({ infoUser })  => {
   return (
     <article className="post" data-testid="user">
       <header className="post__header">
+        <a className="user" href="/">
+          <div className="user__thumb">
+            <img src={avatar} alt="" />
+          </div>
+          <div className="user__name">{name}</div>
+        </a>
       </header>
     </article>
   )
