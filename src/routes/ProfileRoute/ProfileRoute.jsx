@@ -8,6 +8,7 @@ import Loading from '../../components/Loading';
 const ProfileRoute = () => {
   return (
     <div>
+      <UserProfile />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Routes = () => (
     </Route>
 
     <Route path="/users/:username">
-
+      <ProfileRoute />
     </Route>
 
     <Route path="/newuser">
