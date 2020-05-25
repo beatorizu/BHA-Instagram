@@ -7,9 +7,12 @@ import Posts from '../../containers/Posts';
 
 import './FeedRoute.scss';
 
+import postsMock from '../../__tests__/mocks/posts';
+
 const FeedRoute = () => {
   return (
     <div>
+      <Posts posts={postsMock} />
     </div>
   );
 };
