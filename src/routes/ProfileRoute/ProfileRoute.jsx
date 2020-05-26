@@ -5,6 +5,8 @@ import UserPosts from '../../containers/UserPosts';
 
 import Loading from '../../components/Loading';
 
+import postsMock from '../../__tests__/bha_mocks/posts';
+
 const ProfileRoute = () => {
   const username = window.location.pathname.split('/').pop()
   const avatar = "/img/profiles/momo-yaoyorozu/momo-yaoyorozu-profile.png"
@@ -13,6 +15,7 @@ const ProfileRoute = () => {
   return (
     <div>
       <UserProfile username={username} avatar={avatar} name={name} />
+      <UserPosts posts={postsMock} />
     </div>
   );
 };
