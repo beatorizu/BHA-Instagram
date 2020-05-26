@@ -8,7 +8,7 @@ import './UsersList.scss';
 const UersList = ({ users }) => {
   return (
     <section className="users-list">
-      {users?.map(user => <User infoUser={user} />)}
+      {users?.map(user => <User infoUser={user} key={user.id} />)}
     </section>
   )
 };
