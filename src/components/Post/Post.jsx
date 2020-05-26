@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom';
 import './Post.scss';
 
 const Post = ({ postInfo, userInfo }) => {
-  const userThumb = "/img/profiles/izuku-midoriya/izuku-midoriya-profile.jpg"
   return (
     <article className="post" data-testid="post">
       {userInfo && (
         <header className="post__header">
           <div className="user">
             <a className="user__thumb" href="/">
-              <img src={userThumb} alt=""/>
+              <img src={userInfo.avatar} alt=""/>
             </a>
-            <a className="user_name" href="/">Potato</a>
+            <a className="user_name" href="/">{userInfo.name}</a>
           </div>
           <button className="post_context">
             <span className="follow-btn">Seguir</span>
