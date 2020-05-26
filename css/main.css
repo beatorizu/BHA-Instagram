@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+i:active {
+    transform: translateX(1px);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.header, .stories, .posts {
+		padding: 0.375rem 1rem;
+	}
+
+	.stories {
+		overflow: scroll;
+	}
+
+	.post__footer {
+		font-size: 0.75rem;
+	}
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	.header, .stories, .posts {
+		padding: 0.375rem 16rem;
+	}
+}
+
+body {
+	font-family: 'Open Sans';
+	background: #fafafa;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background: #ffffff;
+	position: sticky;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 0 #e2e2e2;
+}
+
+.header__item:last-child {
+	margin-left: auto;
+}
+
+.header__message {
+	font-size: 1.25rem;
+}
+
+.header__logo {
+	width: 7rem;
+}
+
+.stories__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+}
+
+.stories__item {
+	margin: 0 0.625rem;
+	height: 3.125rem;
+	width: 3.125rem;
+	border-radius: 100%;
+}
+
+.stories__item--new-story {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.stories__userphoto, .post__userphoto {
+	border-radius: 100%;
+	height: 3.125rem;
+	width: 3.125rem;
+	border: 3px solid transparent;
+}
+
+.post {
+	border: 2px solid #e2e2e2;
+	border-radius: 7px;
+	margin-bottom: 1.25rem;
+}
+
+.post__header {
+	display: flex;
+	align-items: center;
+	padding: 4px 10px 4px 0;
+}
+
+.post__userphoto {
+	height: 2rem;
+	width: 2rem;
+}
+
+.post__photo {
+	width: 100%;
+	height: 100%;
+}
+
+.post__menu {
+	display: flex;
+	padding: 9px 10px 8px;
+}
+
+.post__like--liked {
+	color: #ed4956;
+}
+
+.post__comment {
+	padding-left: 15px;
+}
+
+.post__save {
+	margin-left: auto;
+}
+
+.post__footer {
+	background: #f2f2f2;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.post__username {
+	font-weight: bolder;
+	margin: 0.25rem;
+}
+
+.post__header--options {
+	margin-left: auto;
+}

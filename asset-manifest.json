@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/BHA-Instagram/static/css/main.81f10299.chunk.css",
+    "main.js": "/BHA-Instagram/static/js/main.68c5cff7.chunk.js",
+    "main.js.map": "/BHA-Instagram/static/js/main.68c5cff7.chunk.js.map",
+    "runtime-main.js": "/BHA-Instagram/static/js/runtime-main.0e586aa8.js",
+    "runtime-main.js.map": "/BHA-Instagram/static/js/runtime-main.0e586aa8.js.map",
+    "static/js/2.4fdb2c77.chunk.js": "/BHA-Instagram/static/js/2.4fdb2c77.chunk.js",
+    "static/js/2.4fdb2c77.chunk.js.map": "/BHA-Instagram/static/js/2.4fdb2c77.chunk.js.map",
+    "index.html": "/BHA-Instagram/index.html",
+    "precache-manifest.19838a75d26586f335df51b31d1e4dda.js": "/BHA-Instagram/precache-manifest.19838a75d26586f335df51b31d1e4dda.js",
+    "service-worker.js": "/BHA-Instagram/service-worker.js",
+    "static/css/main.81f10299.chunk.css.map": "/BHA-Instagram/static/css/main.81f10299.chunk.css.map",
+    "static/js/2.4fdb2c77.chunk.js.LICENSE.txt": "/BHA-Instagram/static/js/2.4fdb2c77.chunk.js.LICENSE.txt",
+    "static/media/instagram-logo.1ff53bdd.svg": "/BHA-Instagram/static/media/instagram-logo.1ff53bdd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e586aa8.js",
+    "static/js/2.4fdb2c77.chunk.js",
+    "static/css/main.81f10299.chunk.css",
+    "static/js/main.68c5cff7.chunk.js"
+  ]
+}
