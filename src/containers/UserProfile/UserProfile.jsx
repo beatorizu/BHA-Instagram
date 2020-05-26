@@ -11,7 +11,7 @@ const UserProfile = ({ avatar, name, username }) => {
             <div className="user__thumb">
               <img src={avatar} alt="" />
             </div>
-            <p className="user_name">{name}<span>@{username}</span></p>
+            <p className="user__name">{name}<span>@{username}</span></p>
           </div>
         </div>
       </div>

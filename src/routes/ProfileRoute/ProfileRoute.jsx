@@ -6,9 +6,10 @@ import UserPosts from '../../containers/UserPosts';
 import Loading from '../../components/Loading';
 
 const ProfileRoute = () => {
+  const username = window.location.pathname.split('/').pop()
   return (
     <div>
-      <UserProfile />
+      <UserProfile username={username} />
     </div>
   );
 };
