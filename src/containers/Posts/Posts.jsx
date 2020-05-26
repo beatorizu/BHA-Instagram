@@ -7,7 +7,7 @@ const userInfo = { "id": 1, "name": "Momo Yaoyorozu", "avatar": "/img/profiles/m
 const Posts = ({ posts, getUserHandler }) => (
   <div className="container" data-testid="posts">
     <section className="feed">
-      {posts?.map(post => <Post postInfo={post} userInfo={userInfo} />)}
+      {posts?.map(post => <Post postInfo={post} userInfo={userInfo} key={post.id} />)}
     </section>
   </div>
 );

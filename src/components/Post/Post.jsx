@@ -9,12 +9,12 @@ const Post = ({ postInfo, userInfo }) => {
       {userInfo && (
         <header className="post__header">
           <div className="user">
-            <a className="user__thumb" href="/">
+            <Link className="user__thumb" to={`/users/${userInfo.username}`}>
               <img src={userInfo.avatar} alt=""/>
-            </a>
-            <a className="user_name" href="/">{userInfo.name}</a>
+            </Link>
+            <Link className="user__name" to={`/users/${userInfo.username}`}>{userInfo.name}</Link>
           </div>
-          <button className="post_context">
+          <button className="post__context">
             <span className="follow-btn">Seguir</span>
           </button>
         </header>
