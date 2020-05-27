@@ -7,7 +7,15 @@ import './UserPosts.scss';
 const UserPosts = ({ posts }) => (
   <div className="container" data-testid="user-posts">
     <section className="user-posts">
-      {posts?.map(post => <Post postInfo={post} key={post.id} />)}
+      {posts.length > 0
+        ? posts.map(post => (<Post postInfo={post} key={post.id} />))
+        : (
+          <div className="no-posts">
+            <span className="no-posts__content">There are no posts by this user</span>
+            <span className="no-posts__emoji" role="img" aria-label="sad emoji">😥</span>
+          </div>
+        )
+      }
     </section>
   </div>
 );
