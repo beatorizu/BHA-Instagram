@@ -8,11 +8,13 @@ import Posts from '../../containers/Posts';
 import './FeedRoute.scss';
 
 import postsMock from '../../__tests__/bha_mocks/posts';
+import usersMock from '../../__tests__/bha_mocks/users';
 
 const FeedRoute = () => {
+  const getPostUserById = postUserId => usersMock.find(user => postUserId === user.id)
   return (
     <div>
-      <Posts posts={postsMock} />
+      <Posts posts={postsMock} getUserHandler={getPostUserById} />
     </div>
   );
 };
