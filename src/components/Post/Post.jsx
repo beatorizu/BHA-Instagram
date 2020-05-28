@@ -7,6 +7,9 @@ import usersMock from '../../__tests__/bha_mocks/users';
 const getPostUserById = postUserId => usersMock.find(user => postUserId === user.id)
 
 const Post = ({ postInfo, userInfo }) => {
+  const [ isLiked, toggleLike ] = useState(false);
+  const [ isFollowing, toggleFollowing ] = useState(false);
+
   const { imageUrl, likes } = postInfo;
   const { username, name } = getPostUserById(likes[0].id);
 
@@ -22,8 +25,15 @@ const Post = ({ postInfo, userInfo }) => {
               {userInfo.name}
             </Link>
           </div>
-          <button className="post__context">
-            <span className="follow-btn">Seguir</span>
+          <button
+            className="post__context"
+            onClick={() => toggleFollowing(!isFollowing)}
+          >
+            {isFollowing ? (
+              <span className="follow-btn is-following">Seguindo</span>
+            ) : (
+              <span className="follow-btn">Seguir</span>
+            )}
           </button>
         </header>
       )}
@@ -32,8 +42,15 @@ const Post = ({ postInfo, userInfo }) => {
       </figure>
       {userInfo && (
         <nav className="post__controls">
-          <button className="post__control">
-            <i className="far fa-heart"></i>
+          <button
+            className="post__control"
+            onClick={() => toggleLike(!isLiked)}
+          >
+            {isLiked ? (
+              <i className="fas fa-heart"></i>
+            ) : (
+              <i className="far fa-heart"></i>
+            )}
           </button>
           <div className="post__status">
             <div className="user">
