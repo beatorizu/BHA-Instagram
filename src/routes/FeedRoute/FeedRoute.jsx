@@ -7,14 +7,34 @@ import Posts from '../../containers/Posts';
 
 import './FeedRoute.scss';
 
-import postsMock from '../../__tests__/bha_mocks/posts';
-import usersMock from '../../__tests__/bha_mocks/users';
-
 const FeedRoute = () => {
-  const getPostUserById = postUserId => usersMock.find(user => postUserId === user.id)
+  const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [usersFetched, setUsersFetched] = useState(0);
+
+  useEffect(() => {
+    fetch('https://5ed1627e4e6d7200163a0839.mockapi.io/users')
+      .then(response => response.json())
+      .then(data => setUsers(data))
+  }, []);
+
+  useEffect(() => {
+    if (usersFetched === users.length) {
+      return;
+    }
+
+    fetch(`https://5ed1627e4e6d7200163a0839.mockapi.io/users/${users[usersFetched].id}/posts`)
+      .then(response => response.json())
+      .then(data => {
+        setPosts([...posts, ...data]);
+        setUsersFetched(usersFetched + 1);
+      });
+  }, [users, usersFetched]);
+
+  const getPostUserById = postUserId => users.find(user => postUserId === user.id)
   return (
     <div>
-      <Posts posts={postsMock} getUserHandler={getPostUserById} />
+      <Posts posts={posts} getUserHandler={getPostUserById} />
     </div>
   );
 };
