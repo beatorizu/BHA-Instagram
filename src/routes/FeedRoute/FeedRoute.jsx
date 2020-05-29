@@ -34,7 +34,10 @@ const FeedRoute = () => {
   const getPostUserById = postUserId => users.find(user => postUserId === user.id)
   return (
     <div>
-      <Posts posts={posts} getUserHandler={getPostUserById} />
+      {users.length !== usersFetched
+        ? <Loading />
+        : <Posts posts={posts} getUserHandler={getPostUserById} />
+      }
     </div>
   );
 };
