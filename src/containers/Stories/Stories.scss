@@ -11,6 +11,7 @@
   display: flex;
   justify-content: flex-start;
   margin: 0 auto;
+  overflow-x: scroll;
 }
 
 .stories .user__thumb {
@@ -23,6 +24,7 @@
   margin: 0 5px;
   padding: 0;
   width: 72px;
+  overflow: visible;
 }
 
 .stories .user__thumb__wrapper {
