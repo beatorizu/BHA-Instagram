@@ -7,6 +7,7 @@ import './Stories.scss';
 const Stories = ({ stories, getUserHandler }) => {
   const [showStory, toggleShowStory] = useState(false);
   const [user, setUser] = useState({});
+  const [story, setStory] = useState({});
 
   return (
     <React.Fragment>
@@ -20,6 +21,7 @@ const Stories = ({ stories, getUserHandler }) => {
                 key={story.id}
                 onClick={() => {
                   setUser(user);
+                  setStory(story);
                   toggleShowStory(true);
                 }}
               >
@@ -36,6 +38,7 @@ const Stories = ({ stories, getUserHandler }) => {
         <Story
           user={user}
           handleClose={() => toggleShowStory(false)}
+          story={story}
         />
       )}
     </React.Fragment>
