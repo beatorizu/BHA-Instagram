@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 
 import './Post.scss';
 
-import usersMock from '../../__tests__/bha_mocks/users';
-const getPostUserById = postUserId => usersMock.find(user => postUserId === user.id)
-
 const Post = ({ postInfo, userInfo }) => {
   const [ isLiked, toggleLike ] = useState(false);
   const [ isFollowing, toggleFollowing ] = useState(false);
 
   const { imageUrl, likes } = postInfo;
-  const { username, name } = getPostUserById(likes[0].id);
+  const { username, name } = likes[0];
 
   return (
     <article className="post" data-testid="post">
