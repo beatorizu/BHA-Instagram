@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import ApiUrl from '../../setupApi'
+
 import Stories from '../../containers/Stories';
 import Loading from '../../components/Loading';
 
@@ -15,7 +17,7 @@ const FeedRoute = () => {
   const getUserById = userId => users.find(user => userId === user.id)
 
   useEffect(() => {
-    fetch('https://5ed1627e4e6d7200163a0839.mockapi.io/users')
+    fetch(`${ApiUrl}/users`)
       .then(response => response.json())
       .then(data => setUsers(data))
   }, []);
@@ -25,7 +27,7 @@ const FeedRoute = () => {
       return;
     }
 
-    fetch(`https://5ed1627e4e6d7200163a0839.mockapi.io/users/${users[usersFetched].id}/posts`)
+    fetch(`${ApiUrl}/users/${users[usersFetched].id}/posts`)
       .then(response => response.json())
       .then(data => {
         data.forEach(post => {
