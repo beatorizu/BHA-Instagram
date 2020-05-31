@@ -13,11 +13,11 @@ const Stories = ({ stories, getUserHandler }) => {
     <React.Fragment>
       <section className="stories" data-testid="stories">
         <div className="container">
-          {stories.slice(0)?.map(story => {
+          {stories?.map(story => {
             const user = getUserHandler(story.userId);
             return (
               <button
-                className="user__thumb"
+                className={`user__thumb${story.isSeenStory ? "" : " new-story"}`}
                 key={story.id}
                 onClick={() => {
                   setUser(user);
@@ -37,7 +37,10 @@ const Stories = ({ stories, getUserHandler }) => {
       {showStory && (
         <Story
           user={user}
-          handleClose={() => toggleShowStory(false)}
+          handleClose={() => {
+            toggleShowStory(false);
+            story.isSeenStory = true;
+          }}
           story={story}
         />
       )}

@@ -26,7 +26,10 @@ const FeedRoute = () => {
   useEffect(() => {
     fetch(`${ApiUrl}/stories`)
       .then((response) => response.json())
-      .then((data) => setStories(data));
+      .then((data) => {
+        data.isSeenStory = false;
+        setStories(data);
+      });
   }, [users])
 
   useEffect(() => {
