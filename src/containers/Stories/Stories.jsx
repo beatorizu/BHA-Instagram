@@ -6,21 +6,25 @@ import './Stories.scss';
 
 const Stories = ({ stories, getUserHandler }) => {
   const [showStory, toggleShowStory] = useState(false);
+  const [user, setUser] = useState({});
 
   return (
     <React.Fragment>
       <section className="stories" data-testid="stories">
         <div className="container">
           {stories.slice(0)?.map(story => {
-            const { avatar, name } = getUserHandler(story.userId);
+            const user = getUserHandler(story.userId);
             return (
               <button
                 className="user__thumb"
                 key={story.id}
-                onClick={() => toggleShowStory(true)}
+                onClick={() => {
+                  setUser(user);
+                  toggleShowStory(true);
+                }}
               >
                 <div className="user__thumb__wrapper">
-                  <img src={avatar} alt={`${name}'s profile`} />
+                  <img src={user.avatar} alt={`${user.name}'s profile`} />
                 </div>
               </button>
             );
@@ -30,11 +34,7 @@ const Stories = ({ stories, getUserHandler }) => {
 
       {showStory && (
         <Story
-          user={{
-            avatar: "/img/profiles/ochako-uraraka/ochako-uraraka-profile.jpg",
-            name: 'Uravity',
-            username: 'uravity'
-          }}
+          user={user}
           handleClose={() => toggleShowStory(false)}
         />
       )}
