@@ -12,6 +12,7 @@ import './FeedRoute.scss';
 const FeedRoute = () => {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [stories, setStories] = useState([]);
   const [usersFetched, setUsersFetched] = useState(0);
 
   const getUserById = userId => users.find(user => userId === user.id)
@@ -21,6 +22,12 @@ const FeedRoute = () => {
       .then(response => response.json())
       .then(data => setUsers(data))
   }, []);
+
+  useEffect(() => {
+    fetch(`${ApiUrl}/stories`)
+      .then((response) => response.json())
+      .then((data) => setStories(data));
+  }, [users])
 
   useEffect(() => {
     if (usersFetched === users.length) {
@@ -44,6 +51,9 @@ const FeedRoute = () => {
 
   return (
     <div>
+      {(users.length > 0 && stories.length > 0) && (
+        <Stories stories={stories} getUserHandler={getUserById} />
+      )}
       {users.length !== usersFetched
         ? <Loading />
         : <Posts posts={posts} getUserHandler={getUserById} />

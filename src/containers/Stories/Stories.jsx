@@ -10,6 +10,16 @@ const Stories = ({ stories, getUserHandler }) => {
     <React.Fragment>
       <section className="stories" data-testid="stories">
         <div className="container">
+          {stories.slice(0)?.map(story => {
+            const { avatar, name } = getUserHandler(story.userId);
+            return (
+              <button className="user__thumb" key={story.id}>
+                <div className="user__thumb__wrapper">
+                  <img src={avatar} alt={`${name}'s profile`} />
+                </div>
+              </button>
+            )
+          })}
         </div>
       </section>
 
