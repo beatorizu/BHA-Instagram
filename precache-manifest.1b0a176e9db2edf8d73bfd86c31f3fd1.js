@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc39a33672bba4fd77024f5af9d36c38",
+    "revision": "bbf9258520bf7038e216589449e40675",
     "url": "/BHA-Instagram/index.html"
   },
   {
-    "revision": "63f1a73b5ac973d2079d",
-    "url": "/BHA-Instagram/static/css/main.81f10299.chunk.css"
+    "revision": "04cf811bbfad3b19143b",
+    "url": "/BHA-Instagram/static/css/main.50ef1ea4.chunk.css"
   },
   {
-    "revision": "fbaf15b26391fa6e3b39",
-    "url": "/BHA-Instagram/static/js/2.4fdb2c77.chunk.js"
+    "revision": "473273b0b9ca507b4811",
+    "url": "/BHA-Instagram/static/js/2.264b201b.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/BHA-Instagram/static/js/2.4fdb2c77.chunk.js.LICENSE.txt"
+    "url": "/BHA-Instagram/static/js/2.264b201b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "63f1a73b5ac973d2079d",
-    "url": "/BHA-Instagram/static/js/main.68c5cff7.chunk.js"
+    "revision": "04cf811bbfad3b19143b",
+    "url": "/BHA-Instagram/static/js/main.56673a45.chunk.js"
   },
   {
     "revision": "49bf954c767e6bb0a32e",
