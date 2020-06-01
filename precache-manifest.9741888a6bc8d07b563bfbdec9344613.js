@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbf9258520bf7038e216589449e40675",
+    "revision": "3b8ea2393f9f7c188287d4b86e3f5d58",
     "url": "/BHA-Instagram/index.html"
   },
   {
-    "revision": "04cf811bbfad3b19143b",
+    "revision": "1b963d93547bb0f7a8ca",
     "url": "/BHA-Instagram/static/css/main.50ef1ea4.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BHA-Instagram/static/js/2.264b201b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "04cf811bbfad3b19143b",
-    "url": "/BHA-Instagram/static/js/main.56673a45.chunk.js"
+    "revision": "1b963d93547bb0f7a8ca",
+    "url": "/BHA-Instagram/static/js/main.cd655b39.chunk.js"
   },
   {
     "revision": "49bf954c767e6bb0a32e",
