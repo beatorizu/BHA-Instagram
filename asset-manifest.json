@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BHA-Instagram/static/css/main.50ef1ea4.chunk.css",
-    "main.js": "/BHA-Instagram/static/js/main.cd655b39.chunk.js",
-    "main.js.map": "/BHA-Instagram/static/js/main.cd655b39.chunk.js.map",
+    "main.js": "/BHA-Instagram/static/js/main.f9247a4f.chunk.js",
+    "main.js.map": "/BHA-Instagram/static/js/main.f9247a4f.chunk.js.map",
     "runtime-main.js": "/BHA-Instagram/static/js/runtime-main.0e586aa8.js",
     "runtime-main.js.map": "/BHA-Instagram/static/js/runtime-main.0e586aa8.js.map",
     "static/js/2.264b201b.chunk.js": "/BHA-Instagram/static/js/2.264b201b.chunk.js",
     "static/js/2.264b201b.chunk.js.map": "/BHA-Instagram/static/js/2.264b201b.chunk.js.map",
     "index.html": "/BHA-Instagram/index.html",
-    "precache-manifest.9741888a6bc8d07b563bfbdec9344613.js": "/BHA-Instagram/precache-manifest.9741888a6bc8d07b563bfbdec9344613.js",
+    "precache-manifest.3e1fe8541699da03401c5a84c0fde268.js": "/BHA-Instagram/precache-manifest.3e1fe8541699da03401c5a84c0fde268.js",
     "service-worker.js": "/BHA-Instagram/service-worker.js",
     "static/css/main.50ef1ea4.chunk.css.map": "/BHA-Instagram/static/css/main.50ef1ea4.chunk.css.map",
     "static/js/2.264b201b.chunk.js.LICENSE.txt": "/BHA-Instagram/static/js/2.264b201b.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.0e586aa8.js",
     "static/js/2.264b201b.chunk.js",
     "static/css/main.50ef1ea4.chunk.css",
-    "static/js/main.cd655b39.chunk.js"
+    "static/js/main.f9247a4f.chunk.js"
   ]
 }
