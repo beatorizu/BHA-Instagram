@@ -7,7 +7,7 @@ const Post = ({ postInfo, userInfo }) => {
   const [ isLiked, toggleLike ] = useState(false);
   const [ isFollowing, toggleFollowing ] = useState(false);
 
-  const { imageUrl, likes } = postInfo;
+  const { imageUrl, likes = [{ username: '', name: '' }] } = postInfo;
   const { username, name } = likes[0];
 
   return (
