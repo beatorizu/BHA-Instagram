@@ -9,7 +9,7 @@ import './App.scss';
 
 const App = () => (
   <div data-testid="app">
-    <BrowserRouter>
+    <BrowserRouter basename="BHA-Instagram">
       <Routes />
       <Topbar />
     </BrowserRouter>
