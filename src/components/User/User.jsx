@@ -9,8 +9,10 @@ const User = ({ infoUser })  => {
     <article className="post" data-testid="user">
       <header className="post__header">
         <Link className="user" to={`/users/${username}`}>
-          <div className="user__thumb">
-            <img src={avatar} alt="" />
+          <div className="user__thumb--newstory">
+            <div className="user__thumb">
+              <img src={avatar} alt="" />
+            </div>
           </div>
           <div className="user__name">{name}</div>
         </Link>

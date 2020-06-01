@@ -19,8 +19,12 @@
     align-items: center;
   }
 
+  .user__thumb--newstory {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    border-radius: 100%;
+  }
+
   .user__thumb {
-    background: linear-gradient(45deg, #D51589 0%, #FF991C 100%);
     border: 2px solid transparent;
     height: 150px;
     width: 150px;
