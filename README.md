@@ -1,7 +1,16 @@
-# Instadev React SPA (Parte 1)
+# Instadev React SPA (Parte 2)
 
 ## Objetivo:
-O desafio desta semana e da próxima será desenvolver um *SPA (Single Page Application)* mobile-first do **Instagram** em React, consumindo uma Rest API que deverá cumprir os seguintes critérios:
+O desafio desta semana e da próxima será desenvolver um *SPA (Single Page Application)* mobile-first do **Instagram** em React.
+
+### Referência em Produção:
+[https://vimeo.com/414861306/fc5bbd5ecc](https://vimeo.com/414861306/fc5bbd5ecc)
+
+### Repositório Base (para fins de estudo):
+[https://github.com/codenation-dev/react-instagram](https://github.com/codenation-dev/react-instagram)
+
+## Requisitos Parte 2:
+Nesta segunda parte você deverá trazer o que foi implementado na parte 1 e cuidar dos estados dos componentes, das requsições HTTP de cada Rota da aplicação e dos ciclos de vida dos componentes utilizando React Hooks e abordagem funcional, os seguintes requisitos devem ser cumpridos:
 
 > * Ser desenvolvido utilizando abordagem funcional e React Hooks para gerenciamento de ciclo de vida e estados.
 > * Consumir os dados da Rest API, usando o [Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch) do Javascript.
@@ -11,18 +20,6 @@ O desafio desta semana e da próxima será desenvolver um *SPA (Single Page Appl
 > * Exibir os **stories** dos **usuários** na rota inicial */*. 
 > * Ao clicar no ícone de **story** do **usuário** deverá abrir seu story com o respectivo vídeo e barra de progresso com a opção de fechar e voltar para o feed (rota inicial).
 > * Deve permitir cadastrar um usuário na rota */newuser* e exibir uma mensagem de alerta ao enviar.
-
-### Referência em Produção:
-
-[https://vimeo.com/414860405/ad600c6832](https://vimeo.com/414860405/ad600c6832)
-
-### Repositório Base (para fins de estudo):
-
-[https://github.com/codenation-dev/react-instagram](https://github.com/codenation-dev/react-instagram)
-
-## Requisitos Parte 1:
-* Nesta primeira parte você deverá focar apenas na componentização do projeto seguindo os padrões descritos abaixo na seção *Estrutura de Arquivos e Pastas*.
-* Não se preocupe com lógica de estados ou requisições http nesta parte, adicione os dados do usuário *hard-code*.
 
 ### Estrutura de Arquivos e Pastas:
 Como já aprendemos em aula, a organização das pastas e arquivos deverá utilizar os seguintes padrões:
@@ -141,14 +138,14 @@ Nesta fase você já foi apresentado ao [testing-library](https://testing-librar
     │   └── UsersList
     │       └── UsersList.jsx -> data-testid="user-list"
     └── routes
-        ├── FeedRoute
+        ├── FeedRoute
         │   └── FeedRoute.jsx -> data-testid="feed-route"
         ├── NewUserRoute
         │   └── NewUserRoute.jsx -> data-testid="new-user-route"
         ├── ProfileRoute
         │   └── ProfileRoute.jsx -> data-testid="profile-route"
         └── UsersRoute
-           └── UsersRoute.jsx -> data-testid="users-route"
+            └── UsersRoute.jsx -> data-testid="users-route"
 
 ### Iniciar o projeto:
 * Instale as dependências do projeto com o comando *yarn install* ou *npm install*.
@@ -172,6 +169,7 @@ Nesta fase você já foi apresentado ao [testing-library](https://testing-librar
         "username": "string",
         "email": "string"
     }
+
 
 ### Stories
 | Resource | Method    | Endpoint                                                        | Status Code |    Response     |
@@ -213,7 +211,6 @@ Nesta fase você já foi apresentado ao [testing-library](https://testing-librar
         "avatar": "string",
         "name": "string"
     }
-
 
 ### Query Params
 > Adicione os seguintes **queries** às requisições *GET*:
