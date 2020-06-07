@@ -8,9 +8,11 @@ const UsersRoute = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch(`${ApiUrl}/users`)
-      .then(response => response.json())
-      .then(data => setUsers(data))
+    (async function() {
+      const response = await fetch(`${ApiUrl}/users`);
+      const data = await response.json();
+      setUsers(data);
+    })();
   }, []);
 
   return (

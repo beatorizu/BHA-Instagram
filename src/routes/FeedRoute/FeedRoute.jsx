@@ -18,18 +18,20 @@ const FeedRoute = () => {
   const getUserById = userId => users.find(user => userId === user.id)
 
   useEffect(() => {
-    fetch(`${ApiUrl}/users`)
-      .then(response => response.json())
-      .then(data => setUsers(data))
+    (async function() {
+      const response = await fetch(`${ApiUrl}/users`);
+      const data = await response.json();
+      setUsers(data);
+    })();
   }, []);
 
   useEffect(() => {
-    fetch(`${ApiUrl}/stories`)
-      .then((response) => response.json())
-      .then((data) => {
-        data.isSeenStory = false;
-        setStories(data);
-      });
+    (async function() {
+      const response = await fetch(`${ApiUrl}/stories`);
+      const data = await response.json();
+      data.isSeenStory = false;
+      setStories(data);
+    })();
   }, [users])
 
   useEffect(() => {
@@ -37,19 +39,19 @@ const FeedRoute = () => {
       return;
     }
 
-    fetch(`${ApiUrl}/users/${users[usersFetched].id}/posts`)
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(post => {
-          post.likes.forEach(like => {
-            const { name, username } = getUserById(like.id)
-            like.name = name;
-            like.username = username;
-          });
+    (async function() {
+      const response = await fetch(`${ApiUrl}/users/${users[usersFetched].id}/posts`);
+      const data = await response.json();
+      data.forEach(post => {
+        post.likes.forEach(like => {
+          const { name, username } = getUserById(like.id)
+          like.name = name;
+          like.username = username;
         });
-        setPosts([...posts, ...data]);
-        setUsersFetched(usersFetched + 1);
       });
+      setPosts([...posts, ...data]);
+      setUsersFetched(usersFetched + 1);
+    })();
   }, [users, usersFetched]);
 
   return (

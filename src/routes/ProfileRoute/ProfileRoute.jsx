@@ -13,21 +13,23 @@ const ProfileRoute = () => {
   const [isLoading, toggleLoading] = useState(true)
 
   useEffect(() => {
-    const username = window.location.pathname.split('/').pop()
+    const username = window.location.pathname.split('/').pop();
 
-    fetch(`${ApiUrl}/users`)
-      .then(response => response.json())
-      .then(data => setUser(data.find(user => user.username === username)))
+    (async function() {
+      const response = await fetch(`${ApiUrl}/users`);
+      const data = await response.json();
+      setUser(data.find(user => user.username === username));
+    })();
   }, [])
 
   useEffect(() => {
     if (user.id) {
-      fetch(`${ApiUrl}/users/${user.id}/posts`)
-        .then(response => response.json())
-        .then(data => {
-          setPosts(data);
-          toggleLoading(false);
-        });
+      (async function () {
+        const response = await fetch(`${ApiUrl}/users/${user.id}/posts`);
+        const data = await response.json();
+        setPosts(data);
+        toggleLoading(false);
+      })();
     }
   }, [user.id])
 
