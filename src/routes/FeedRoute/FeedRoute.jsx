@@ -55,7 +55,7 @@ const FeedRoute = () => {
   }, [users, usersFetched]);
 
   return (
-    <div>
+    <div data-testid="feed-route">
       {(users.length > 0 && stories.length > 0) && (
         <Stories stories={stories} getUserHandler={getUserById} />
       )}

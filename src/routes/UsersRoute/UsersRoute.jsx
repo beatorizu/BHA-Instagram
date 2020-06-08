@@ -16,7 +16,7 @@ const UsersRoute = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" data-testid="users-route">
       <UsersList users={users} />
     </div>
   );

@@ -34,7 +34,7 @@ const ProfileRoute = () => {
   }, [user.id])
 
   return (
-    <div>
+    <div data-testid="profile-route">
         <UserProfile username={user.username} avatar={user.avatar} name={user.name} />
       {isLoading
         ? <Loading />
